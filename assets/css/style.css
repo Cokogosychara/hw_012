@@ -1,0 +1,77 @@
+*{
+    /* задаю параметры всему проэкту */
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 0;
+}
+
+:root{
+    /* задаю цветовой инструменти стиль текста */
+    --color-text:hsl(208, 100%, 97%);
+    --color-dark:rgb(19, 134, 134);
+    --color-background:rgb(53, 51, 58);
+    font-family: Trebuchet MS, sans-serif;
+}
+.header-flex{
+    /* включаю флекас */
+    display: flex;
+    min-width: 400px;
+    justify-content: space-between;
+    align-items:center;
+    flex-flow:wrap;
+    background-color: var(--color-background);
+}
+.logo-button{
+    /* задаю отступы первому и последнему блоку */
+    padding: 1em 2.5em;
+}
+.logo__link{
+    /* первый блок задал размер стиль тиекста и убрал стили кот шли по умолчанию */
+    font-size: 1.5em;
+    color: var(--color-text);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family:Comic Sans MS, Comic Sans, cursive; 
+}
+.nav{
+    /* отступ центральноого элемента, что бы при сужении все стали по одной линии */
+    padding: 0 2.5em;
+}
+.nav__list{
+    /* обратился к списку и выбрал ему значение блочно строчного элемента */
+    display: inline-block;
+}
+.nav__list+.nav__list{
+    /* задал всем кроме первого отступ с левой стороны */
+    padding-left: 20px;
+}
+.nav__link{
+    /* при наведении цвет ссылки иудет изменяться плавно */
+    transition: color 0.5s;
+}
+.nav__link:hover{
+    /* при наведении цвет изменится с белого на голубой   */
+    color:var(--color-dark);
+}
+.content{
+    /* задал базовые размеры и цвет тексту в проэкте, убрал базовые стилти */
+    color: var(--color-text);
+    font-size: 0.8em;
+    text-decoration: none;
+    text-transform:uppercase ;
+    font-weight:bold;
+}
+.button__link{
+    /* кнопка  */
+    display: block;
+    padding: 1em 3em;
+    font-size: 0.6em;
+    border:1px solid var(--color-text);
+    border-radius: 3px;
+    transition: background-color 0.2s 0.1s ease-in-out;
+}
+.button__link:hover{
+    /* при навелении на кнопку цвет будет меняться  */
+    background-color: var(--color-dark);
+}
+
